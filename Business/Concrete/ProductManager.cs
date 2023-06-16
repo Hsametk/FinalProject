@@ -25,5 +25,10 @@ namespace Business.Concrete
             //İş kodları
             return _productDal.GetAll();
         }
+
+        public List<Product> GetAllByCategory(int categoryId)
+        {
+            return _productDal.GetAllByCategory(categoryId);
+        }
     }
 }

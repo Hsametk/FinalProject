@@ -9,3 +9,9 @@ foreach (var product in productManager.GetAll())
 {
     Console.WriteLine(product.ProductName);
 }
+
+Console.WriteLine("---------------");
+foreach (var product in productManager.GetAllByCategory(1))
+{
+    Console.WriteLine(product.ProductName);
+}

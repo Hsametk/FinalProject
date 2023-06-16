@@ -68,5 +68,43 @@ namespace DataAccess.Concrete.InMemory
         {
             return _products.Where(p => p.CategoryId == categoryId).ToList();
         }
+
+
+        //Linq ödev gelişmiş
+        public void Any()
+        {
+            var result = _products.Any(p => p.ProductName == "K");
+        }
+
+        public void Find()
+        {
+            var result = _products.Find(p => p.ProductId == 3);
+        }
+
+        public void FindAll()
+        {
+            var result = _products.FindAll(p => p.ProductName.Contains("top"));
+        }
+
+        public void OrderBy()
+        {
+            var result = _products.Where(p => p.ProductName.Contains("top")).OrderByDescending(p=> p.UnitPrice).ThenBy(p=> p.ProductName);
+        }
+
+        public void Query()
+        {
+            var result = from p in _products
+                    where p.UnitPrice>= 150 
+                    orderby p.UnitPrice descending , p.ProductName ascending 
+                        select new ProductDto{ProductId = p.ProductId, ProductName = p.ProductName, UnitPrice = p.UnitPrice};
+        }
+
+        class ProductDto
+        {
+            public int ProductId { get; set; }
+            public string  ProductName { get; set; }
+            public decimal UnitPrice { get; set; }
+        }
     }
+
 }
