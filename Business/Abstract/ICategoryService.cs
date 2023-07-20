@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entities.Concrete;
-using Core.DataAccess;
-namespace DataAccess.Abstract
+
+namespace Business.Abstract
 {
-    public interface ICustomerDal : IEntitiyRepository<Customer>
+    public interface ICategoryService
     {
-        
+        List<Category> GetAll();
+        Category GetById(int categoryId);
+
     }
 }

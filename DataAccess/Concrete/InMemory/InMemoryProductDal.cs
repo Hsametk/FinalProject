@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess.Abstract;
-using Entities.Abstract;
+using Core.Entities;
 using Entities.Concrete;
 
 namespace DataAccess.Concrete.InMemory

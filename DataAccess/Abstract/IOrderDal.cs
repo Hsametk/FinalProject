@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Core.DataAccess;
+
 namespace DataAccess.Abstract
 {
-    public interface ICategoryDal : IEntitiyRepository<Category>
+    public interface IOrderDal : IEntitiyRepository<Order>
     {
-   
     }
 }
