@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using DataAccess.Abstract;
 using Core.Entities;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace DataAccess.Concrete.InMemory
 {
@@ -108,6 +109,11 @@ namespace DataAccess.Concrete.InMemory
                     where p.UnitPrice>= 150 
                     orderby p.UnitPrice descending , p.ProductName ascending 
                         select new ProductDto{ProductId = p.ProductId, ProductName = p.ProductName, UnitPrice = p.UnitPrice};
+        }
+
+        public List<ProductDetailDto> GetProductDetails()
+        {
+            throw new NotImplementedException();
         }
 
         class ProductDto
