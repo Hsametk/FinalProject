@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Core.DataAccess;
 namespace DataAccess.Abstract
 {
-    public interface ICategoryDal : IEntitiyRepository<Category>
+    public interface ICategoryDal : IEntityRepository<Category>
     {
    
     }

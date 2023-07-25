@@ -8,7 +8,7 @@ using Core.DataAccess;
 
 namespace DataAccess.Abstract
 {
-    public interface IOrderDal : IEntitiyRepository<Order>
+    public interface IOrderDal : IEntityRepository<Order>
     {
     }
 }
